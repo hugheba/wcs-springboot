@@ -1,4 +1,4 @@
-#wcs-springboot
+# wcs-springboot
 
 Library to speed up integration of Flashphoner WebCallServer into SpringBoot apps.
 
@@ -7,7 +7,7 @@ The project contains:
 - A WebCallServer API Java client library 
 - An API server to respond to web-hooks from a WebCallServer
 
-#Installation
+# Installation
 
 Add the dependency to a SpringBoot application.
 
