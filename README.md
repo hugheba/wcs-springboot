@@ -1,5 +1,8 @@
 # wcs-springboot
 
+[![](https://jitpack.io/v/hugheba/wcs-springboot.svg)](https://jitpack.io/#hugheba/wcs-springboot)
+s
+
 Library to speed up integration of Flashphoner WebCallServer into SpringBoot apps.
 
 The project contains:
@@ -21,7 +24,7 @@ In your `build.gradle` add:
     
     dependencies {
         ...
-        implementation 'com.github.hugheba.wcs-springboot:wcs:master-SNAPSHOT'
+        implementation 'com.github.hugheba.wcs-springboot:wcs:${release}'
         ...
     }
 
@@ -37,7 +40,7 @@ In your `pom.xml` add:
     <dependency>
         <groupId>com.github.hugheba.wcs-springboot</groupId>
         <artifactId>wcs</artifactId>
-        <version>master-SNAPSHOT</version>
+        <version>${release}</version>
     </dependency>
 
 ## SpringBoot
