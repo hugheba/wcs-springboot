@@ -4,9 +4,6 @@ plugins {
 }
 
 apply plugin: 'io.spring.dependency-management'
-apply plugin: 'maven'
-
-sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()
