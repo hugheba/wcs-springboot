@@ -15,6 +15,10 @@ Add the dependency to a SpringBoot application.
 
 In your `build.gradle` add:
     
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+    
     dependencies {
         ...
         implementation 'com.github.hugheba.wcs-springboot:wcs:master-SNAPSHOT'
