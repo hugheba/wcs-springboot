@@ -7,7 +7,6 @@ import com.hugheba.wcs.model.hook.StreamStatusEventRequest
 import groovy.transform.CompileStatic
 import groovy.util.logging.Slf4j
 import org.springframework.http.HttpStatus
-import org.springframework.stereotype.Service
 import org.springframework.web.bind.annotation.ResponseStatus
 
 @Slf4j

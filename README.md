@@ -18,7 +18,7 @@ In your `settings.gradle` add:
     sourceControl {
         ...
         gitRepository("https://github.com/hugheba/wcs-springboot.git") {
-            producesModule("com.hugheba.wcs:wcs-springboot")
+            producesModule("com.hugheba.wcs:wcs")
         }
         ...
     }
@@ -27,7 +27,7 @@ In your `build.gradle` add:
     
     dependencies {
         ...
-        implementation 'com.hugheba.wcs:wcs-springboot:1.0'
+        implementation 'com.hugheba.wcs:wcs:1.0'
         ...
     }
 
@@ -40,7 +40,7 @@ In your `build.gradle` add:
     
     <dependency>
         <groupId>com.github.hugheba</groupId>
-        <artifactId>wcs-springboot</artifactId>
+        <artifactId>wcs</artifactId>
         <version>master</version>
     </dependency>
 
