@@ -13,29 +13,17 @@ Add the dependency to a SpringBoot application.
 
 ## Gradle
 
-In your `settings.gradle` add:
-
-    sourceControl {
-        ...
-        gitRepository("https://github.com/hugheba/wcs-springboot.git") {
-            producesModule("com.hugheba.wcs:wcs")
-        }
-        ...
-    }
-
 In your `build.gradle` add:
     
     dependencies {
         ...
-        implementation 'com.hugheba.wcs:wcs', {
-            version {
-                branch = 'master'
-            }
-        }
+        implementation 'com.github.hugheba.wcs-springboot:wcs:master-SNAPSHOT'
         ...
     }
 
 ## Maven
+
+In your `pom.xml` add:
 
     <repository>
         <id>jitpack.io</id>
@@ -43,9 +31,9 @@ In your `build.gradle` add:
     </repository>
     
     <dependency>
-        <groupId>com.github.hugheba</groupId>
+        <groupId>com.github.hugheba.wcs-springboot</groupId>
         <artifactId>wcs</artifactId>
-        <version>master</version>
+        <version>master-SNAPSHOT</version>
     </dependency>
 
 ## SpringBoot
