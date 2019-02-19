@@ -17,3 +17,5 @@ dependencies {
     implementation 'org.codehaus.groovy:groovy'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+
+install.dependsOn(assemble)
