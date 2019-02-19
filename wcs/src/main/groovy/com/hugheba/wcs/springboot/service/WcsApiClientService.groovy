@@ -50,23 +50,23 @@ class WcsApiClientService {
     List<Stream> streamFindAll() {
         wcsRestTemplate.postForObject(
                 generateUri('/stream/find_all')
-                , [:]
-                , List<Stream>
-        )
+                , null
+                , Stream[]
+        ) as List<Stream>
     }
 
     List<Stream> streamFind(String name, String mediaSessionId, String status, String published) {
         wcsRestTemplate.postForObject(
                 generateUri('/stream/find')
                 , [name: name, mediaSessionId: mediaSessionId, status: status, published: published]
-                ,List<Stream>
-        )
+                , Stream[]
+        ) as List<Stream>
     }
 
     Void streamTerminate(String name, List<String> mediaSessionIds, String status, Boolean published) {
         wcsRestTemplate.postForObject(
                 generateUri('/terminate')
-                , [name: name, ]
+                , [name: name]
                 , Void
         )
     }
@@ -124,17 +124,17 @@ class WcsApiClientService {
     List<Connection> connectionFindAll() {
         wcsRestTemplate.postForObject(
                 generateUri('/connection/find_all')
-                , [:]
-                , List<Connection>
-        )
+                , null
+                , Connection[]
+        ) as List<Connection>
     }
 
     List<Connection> connectionFind(String appKey, String sessionId, String clientVersion) {
         wcsRestTemplate.postForObject(
                 generateUri('/connection/find')
                 , [appKey: appKey, sessionId: sessionId, clientVersion: clientVersion]
-                , List<Connection>
-        )
+                , Connection[]
+        ) as List<Connection>
     }
 
     /* END CONNECTION */
