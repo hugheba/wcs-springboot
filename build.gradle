@@ -4,6 +4,7 @@ plugins {
 }
 
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'java'
 apply plugin: 'maven'
 
 group 'com.hugheba.wcs'
@@ -22,6 +23,10 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+jar {
+    enabled = true
+}
+
 task sourcesJar(type: Jar, dependsOn: classes) {
     classifier = 'sources'
     from sourceSets.main.allSource
@@ -37,4 +42,4 @@ artifacts {
     archives javadocJar
 }
 
-install.dependsOn(assemble)
+install.dependsOn(jar)
