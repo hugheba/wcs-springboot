@@ -27,7 +27,11 @@ In your `build.gradle` add:
     
     dependencies {
         ...
-        implementation 'com.hugheba.wcs:wcs:1.0'
+        implementation 'com.hugheba.wcs:wcs', {
+            version {
+                branch = 'master'
+            }
+        }
         ...
     }
 
