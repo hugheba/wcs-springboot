@@ -13,6 +13,8 @@ Add the dependency to a SpringBoot application.
 
 ## Gradle
 
+In your `settings.gradle` add:
+
     sourceControl {
         ...
         gitRepository("https://github.com/hugheba/wcs-springboot.git") {
@@ -20,6 +22,8 @@ Add the dependency to a SpringBoot application.
         }
         ...
     }
+
+In your `build.gradle` add:
     
     dependencies {
         ...
@@ -42,7 +46,9 @@ Add the dependency to a SpringBoot application.
 
 ## SpringBoot
 
-Add this dependency to your applcations @ComponentScan("com.hugheba.wcs.springboot") 
+Add the dependencies to your SpringBoot application:
+
+    @ComponentScan("com.hugheba.wcs.springboot") 
 
 # WebCallServer Client Library
 
