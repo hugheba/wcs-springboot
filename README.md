@@ -63,7 +63,7 @@ Configure these `application.properties` in the project:
 
 ## Usage
 
-You can use the `WcsApiClientService` service bean to access the WebCallServer 
+You can use the `com.hugheba.wcs.springboot.service.WcsApiClientService` service bean to access the WebCallServer 
 configured with the `wcs.api.uri` property.
 
 # WebCallService Hook Server
