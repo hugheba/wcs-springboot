@@ -1,7 +1,6 @@
 # wcs-springboot
 
 [![](https://jitpack.io/v/hugheba/wcs-springboot.svg)](https://jitpack.io/#hugheba/wcs-springboot)
-s
 
 Library to speed up integration of Flashphoner WebCallServer into SpringBoot apps.
 
