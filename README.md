@@ -91,6 +91,7 @@ import com.hugheba.wcs.springboot.service.WcsHookService;
 
 @Service('wcsHookService')
 public class MyCustomWcsHookService extends WcsHookService {
+    
     @Override
     public static void connect(ConnectRequest req) ...
     
@@ -102,5 +103,6 @@ public class MyCustomWcsHookService extends WcsHookService {
       
     @Override
     public static void onCallevent(OnCallEventRequest req) ...
+    
 }
 ```
