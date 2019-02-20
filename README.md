@@ -16,37 +16,42 @@ Add the dependency to a SpringBoot application.
 ## Gradle
 
 In your `build.gradle` add:
-    
-    repositories {
-        maven { url 'https://jitpack.io' }
-    }
-    
-    dependencies {
-        ...
-        implementation 'com.github.hugheba.wcs-springboot:wcs:${release}'
-        ...
-    }
+
+```groovy
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'com.github.hugheba.wcs-springboot:wcs:${release}'
+}
+```
 
 ## Maven
 
 In your `pom.xml` add:
 
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-    
-    <dependency>
-        <groupId>com.github.hugheba.wcs-springboot</groupId>
-        <artifactId>wcs</artifactId>
-        <version>${release}</version>
-    </dependency>
+```xml
+<repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+</repository>
+
+<dependency>
+    <groupId>com.github.hugheba.wcs-springboot</groupId>
+    <artifactId>wcs</artifactId>
+    <version>${release}</version>
+</dependency>
+```
 
 ## SpringBoot
 
-Add the dependencies to your SpringBoot application:
+Add the dependencies to your SpringBoot application's component scan:
 
-    @ComponentScan("com.hugheba.wcs.springboot") 
+```java
+@SpringBootApplication(scanBasePackages={"com.hugheba.wcs.springboot"})
+public class SpringBootApplication() {}
+```
 
 # WebCallServer Client Library
 
@@ -80,20 +85,22 @@ and overrides any of the hooks; **connect**, **publishStream**, **StreamStatusEv
 The parent `WcsHookService` has defaults to return _true_ for all methods so you only need to override
 those methods you need to customize.
 
-    import com.hugheba.wcs.model.hook.*
-    import com.hugheba.wcs.springboot.service.WcsHookService
+```java
+import com.hugheba.wcs.model.hook.*;
+import com.hugheba.wcs.springboot.service.WcsHookService;
+
+@Service('wcsHookService')
+public class MyCustomWcsHookService extends WcsHookService {
+    @Override
+    public static void connect(ConnectRequest req) ...
     
-    @Service('wcsHookService')
-    class MyCustomWcsHookService extends WcsHookService {
-        @Override
-        public static void connect(ConnectRequest req) ...
-        
-        @Override
-        public static void publishStream(PublishStreamRequest req) ...
-        
-        @Override
-        public static void streamStatusEvent(StreamStatusEventRequest req) ..
-        
-        @Override
-        public static void onCallevent(OnCallEventRequest req) ...
-    }
+    @Override
+    public static void publishStream(PublishStreamRequest req) ...
+    
+    @Override
+    public static void streamStatusEvent(StreamStatusEventRequest req) ... 
+      
+    @Override
+    public static void onCallevent(OnCallEventRequest req) ...
+}
+```
