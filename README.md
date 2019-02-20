@@ -9,6 +9,11 @@ The project contains:
 - A WebCallServer API Java client library 
 - An API server to respond to web-hooks from a WebCallServer
 
+## TODO
+
+- Create springboot-starter to autoconfigure application
+- Allow for customization of model properties
+
 # Installation
 
 Add the dependency to a SpringBoot application.

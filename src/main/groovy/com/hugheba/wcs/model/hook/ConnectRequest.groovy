@@ -11,4 +11,5 @@ class ConnectRequest {
     String clientVersion
     String clientOSVersion
     String clientBrowserVersion
+    Map<String, Object> custom
 }
