@@ -66,6 +66,8 @@ Configure these `application.properties` in the project:
 You can use the `com.hugheba.wcs.springboot.service.WcsApiClientService` service bean to access the WebCallServer 
 configured with the `wcs.api.uri` property.
 
+Refer to the WebCallServer API documentation: https://flashphoner.com/docs/wcs5/265/html/en/wcs-rest-api/
+
 # WebCallService Hook Server
 
 ## Configuration
