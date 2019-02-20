@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.ResponseStatus
 class WcsHookService {
 
     @ResponseStatus(HttpStatus.FORBIDDEN)
-    static final class AccessDeniedResponseStatus extends RuntimeException {}
+    final class AccessDeniedResponseStatus extends RuntimeException {}
 
-    static void connect(ConnectRequest req) { true }
+    void connect(ConnectRequest req) { true }
 
-    static void publishStream(PublishStreamRequest req) { true }
+    void publishStream(PublishStreamRequest req) { true }
 
-    static void streamStatusEvent(StreamStatusEventRequest req) { true }
+    void streamStatusEvent(StreamStatusEventRequest req) { true }
 
-    static void onCallEvent(OnCallEventRequest req) { true }
+    void onCallEvent(OnCallEventRequest req) { true }
 
 }
