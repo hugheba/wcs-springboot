@@ -14,4 +14,5 @@ class OnCallEventRequest {
     String mediaProvider
     Boolean isMsrp
     Boolean holdForTransfer
+    Map<String, Object> custom
 }

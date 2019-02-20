@@ -17,4 +17,5 @@ class StreamStatusEventRequest {
     Integer bitrate
     Integer quality
     String mediaProvider
+    Map<String, Object> custom
 }
