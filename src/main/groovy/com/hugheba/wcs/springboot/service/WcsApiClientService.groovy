@@ -27,9 +27,7 @@ import org.springframework.web.util.UriComponentsBuilder
 class WcsApiClientService {
 
     @Bean('wcsRestTemplate')
-    RestTemplate wcsRestTemplate() {
-        return new RestTemplate()
-    }
+    RestTemplate wcsRestTemplate() { return new RestTemplate() }
 
     @Autowired RestTemplate wcsRestTemplate
 

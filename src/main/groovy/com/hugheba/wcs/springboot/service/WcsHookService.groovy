@@ -1,9 +1,6 @@
 package com.hugheba.wcs.springboot.service
 
-import com.hugheba.wcs.model.hook.ConnectRequest
-import com.hugheba.wcs.model.hook.OnCallEventRequest
-import com.hugheba.wcs.model.hook.PublishStreamRequest
-import com.hugheba.wcs.model.hook.StreamStatusEventRequest
+import com.hugheba.wcs.model.hook.*
 import groovy.transform.CompileStatic
 import groovy.util.logging.Slf4j
 import org.springframework.http.HttpStatus
@@ -16,12 +13,64 @@ class WcsHookService {
     @ResponseStatus(HttpStatus.FORBIDDEN)
     final class AccessDeniedResponseStatus extends RuntimeException {}
 
-    void connect(ConnectRequest req) { true }
+    void availableStream(AvailableStreamRequest req)  { }
 
-    void publishStream(PublishStreamRequest req) { true }
+    void bugReportStatusEvent(BugReportStatusEventRequest req) { }
 
-    void streamStatusEvent(StreamStatusEventRequest req) { true }
+    void callStatusEvent(CallStatusEventRequest req) { }
 
-    void onCallEvent(OnCallEventRequest req) { true }
+    void connect(ConnectRequest req) { }
+
+    void connectionStatusEvent(ConnectionStatusEventRequest req) { }
+
+    void dataStatusEvent(DataStatusEventRequest req) { }
+
+    void errorStatusEvent(ErrorStatusEventRequest req) { }
+
+    void hangup(HangupRequest req) { }
+
+    void hold(HoldRequest req) { }
+
+    void messageStatusEvent(MessageStatusEventRequest req) { }
+
+    void onCallEvent(OnCallEventRequest req) { }
+
+    void onDataEvent(OnDataEventRequest req) { }
+
+    void onMessageEvent(OnMessageEventRequest req) { }
+
+    void onTransferEvent(OnTransferEventRequest req) { }
+
+    void pauseStream(PauseStreamRequest req) { }
+
+    void playHLS(PlayHLSRequest req) { }
+
+    void playRTSP(PlayRTSPRequest req) { }
+
+    void playStream(PlayStreamRequest req) { }
+
+    void publishStream(PublishStreamRequest req) { }
+
+    void recordingStatusEvent(RecordingStatusEventRequest req) { }
+
+    void registrationStatusEvent(RegistrationStatusEventRequest req) { }
+
+    void sendDtmf(SendDtmfRequest req) { }
+
+    void sendMessage(SendMessageRequest req) { }
+
+    void sessionDebug(SessionDebugRequest req) { }
+
+    void sessionDebugStatusEvent(SessionDebugStatusEventRequest req) { }
+
+    void streamsStatEvent(StreamsStatEventRequest req) { }
+
+    void streamStatusEvent(StreamStatusEventRequest req) { }
+
+    void streamTranscodingGroupEvent(StreamTranscodingGroupEventRequest req) { }
+
+    void subscribe(SubscribeRequest req) { }
+
+    void xcapStatusEvent(XcapStatusEventRequest req) { }
 
 }
