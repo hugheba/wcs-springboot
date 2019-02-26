@@ -3,15 +3,10 @@ package com.hugheba.wcs.springboot.service
 import com.hugheba.wcs.model.hook.*
 import groovy.transform.CompileStatic
 import groovy.util.logging.Slf4j
-import org.springframework.http.HttpStatus
-import org.springframework.web.bind.annotation.ResponseStatus
 
 @Slf4j
 @CompileStatic
 class WcsHookService {
-
-    @ResponseStatus(HttpStatus.FORBIDDEN)
-    final class AccessDeniedResponseStatus extends RuntimeException {}
 
     void availableStream(AvailableStreamRequest req)  { }
 
